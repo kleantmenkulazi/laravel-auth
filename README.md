@@ -15,7 +15,6 @@
 
 6. Aprire un altro terminale ed eseguire il comando php artisan serve
 
-
 --------------------------------------------------------------------------------------------
 
 
