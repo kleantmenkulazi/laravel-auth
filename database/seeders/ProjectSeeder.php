@@ -17,7 +17,7 @@ class ProjectSeeder extends Seeder
         Project::truncate();
 
         $title = fake()->words(5, true);
-        $slug = str_replace([' '], ['-'], strtolower($title));
+        $slug = str()->slug($title);
 
         for ($i=0; $i < 10; $i++) { 
             $title = $fake()->sentence();

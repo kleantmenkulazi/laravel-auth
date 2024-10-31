@@ -15,6 +15,16 @@
         </div>
     </div>
 
+
+    <div class="row mb-4">
+        <div class="col text-center">
+            <a class="btn btn-success" href="{{ route('admin.projects.create')}}">
+                Create a new Project +
+            </a>
+        </div>
+    </div>
+
+
     <div class="row">
         <div class="col">
             <div class="card">
@@ -41,7 +51,9 @@
                                     <td>{{ $project->published }}</td>
                                     {{-- se il progetto è pubblicato 'Yes', altrimenti 'No' --}}
                                     <td>{{ $project->published ? 'Yes' : 'No' }}</td>
-                                    <td>Actions...</td>
+                                    <td>
+                                        <a class="btn btn-outline-primary btn-sm" href="{{ route('admin.projects.show', ['project' => $project->id]) }}"></a>
+                                    </td>
                                 </tr>
                             @endforeach
 
