@@ -58,3 +58,18 @@ Tutte queste 4 view, saranno messe in una cartella dentro views, nominata come l
 - Comando per eseguire migrate + db:seed: php artisan migrate --seed / php artisan migrate:refresh --seed
 - Comando per vedere la lista delle rotte definite nell'applicazione: php artisan route:list
 - Comando per creare un model, una migration, un seeder e un resource controller tutto insieme: php artisan make:model NomeRisorsa -msr
+
+
+
+
+Es
+Ciao ragazzi,
+creiamo con Laravel il nostro sistema di gestione del nostro Portfolio di progetti.
+Oggi iniziamo un nuovo progetto che si arricchirà nel corso delle prossime lezioni: man mano aggiungeremo funzionalità e vedremo la nostra applicazione crescere ed evolvere.
+Nel pomeriggio, rifate ciò che abbiamo visto insieme stamattina stilando tutto a vostro piacere utilizzando SASS.
+Descrizione:
+Ripercorriamo gli steps fatti a lezione ed iniziamo un nuovo progetto usando il template di Alessio con autenticazione.
+Iniziamo con il definire il layout, modello, migrazione, controller e rotte necessarie per il sistema portfolio:
+Autenticazione: si parte con l'autenticazione e la creazione di un layout per back-office
+Creazione del modello Project con relativa migrazione, seeder, controller, rotte e view
+Per la parte di back-office creiamo un resource controller Admin\ProjectController per gestire tutte le operazioni CRUD dei progetti
