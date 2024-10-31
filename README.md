@@ -73,3 +73,8 @@ Iniziamo con il definire il layout, modello, migrazione, controller e rotte nece
 Autenticazione: si parte con l'autenticazione e la creazione di un layout per back-office
 Creazione del modello Project con relativa migrazione, seeder, controller, rotte e view
 Per la parte di back-office creiamo un resource controller Admin\ProjectController per gestire tutte le operazioni CRUD dei progetti
+
+
+
+APP_KEY=base64:31+6DNfxgvE0mFSDiruS8vdDL7iqWUnLLjP3Zjr+3ZY=
+APP_KEY=base64:feNfOmby0YelOD2FCGHVkmyDMFL5hIxMkoqHcT8/bYY=

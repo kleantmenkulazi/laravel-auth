@@ -13,9 +13,13 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('slug');
-            $table->text('content');
+             $table->string('title', 64);
+             $table->string('slug')->unique();
+             $table->text('description');
+             $table->string('cover', 2048)->nullable();
+             $table->string('client', 64)->nullable();
+             $table->string('sector', 64)->nullable();
+             $table->boolean('published')->default(false);
             $table->timestamps();
         });
     }
