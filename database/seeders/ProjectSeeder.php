@@ -15,13 +15,17 @@ class ProjectSeeder extends Seeder
     public function run(): void
     {
         Project::truncate();
-        for ($i=0; $i < 50; $i++) { 
+        for ($i=0; $i < 10; $i++) { 
             $title = $fake()->sentence();
 
             Project::create([
                 'title' => $title,
                 'slug' => str()->slug($title),
-                'content' => fake()->paragraph()
+                'content' => fake()->paragraph(),
+                'cover' => fake()->optional()->imageUrl(),
+                'client' => fake()->words(2, true),
+                'sector' => fake()->word(),
+                'published' => fake()->boolean(70),
             ]);
         }
     }
