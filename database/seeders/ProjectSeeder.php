@@ -15,12 +15,16 @@ class ProjectSeeder extends Seeder
     public function run(): void
     {
         Project::truncate();
+
+        $title = fake()->words(5, true);
+        $slug = str_replace([' '], ['-'], strtolower($title));
+
         for ($i=0; $i < 10; $i++) { 
             $title = $fake()->sentence();
 
             Project::create([
                 'title' => $title,
-                'slug' => str()->slug($title),
+                'slug' => $slug,
                 'content' => fake()->paragraph(),
                 'cover' => fake()->optional()->imageUrl(),
                 'client' => fake()->words(2, true),
